@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Grid from './Grid'
 
 window.onload = function(){
   ReactDOM.render(
-    <h1> App Started </h1>,
+    <Grid />,
     document.getElementById('app')
-  );
+  )
 }
