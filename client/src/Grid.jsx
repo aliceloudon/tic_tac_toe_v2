@@ -17,16 +17,30 @@ class Grid extends React.Component {
         {index: 7},
         {index: 8},
         ],
-      currentPlayer: 'x'
+      currentPlayer: ''
     }
   }
 
+  togglePlayer(){
+    let newPlayer
+    if(this.state.currentPlayer === 'x'){
+      newPlayer = 'o'
+    }
+    else {
+      newPlayer = 'x'
+    }
+    this.setState({currentPlayer: newPlayer})
+  }
+
   render(){
-
     const gridSquares = this.state.squares.map( (square, index) => {
-      return <Square key={index}></Square>
+      return <Square 
+        key={index} 
+        togglePlayer={this.togglePlayer.bind(this)}
+        currentPlayer={this.state.currentPlayer}
+        >
+        </Square>
     })
-
     return (
       <div>
         <h1>Tic Tac Toe</h1>
