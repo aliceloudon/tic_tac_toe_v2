@@ -1,3 +1,12 @@
-#grid {
-  
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 310px;
+}
+
+.square {
+  border: 1px solid grey;
+  width: 100px;
+  height: 100px;
+  text-align: center;
 }

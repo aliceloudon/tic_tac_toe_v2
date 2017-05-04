@@ -30,7 +30,7 @@ class Grid extends React.Component {
     return (
       <div>
         <h1>Tic Tac Toe</h1>
-        <div id='grid'>
+        <div className='grid'>
           {gridSquares}
         </div>
       </div>
