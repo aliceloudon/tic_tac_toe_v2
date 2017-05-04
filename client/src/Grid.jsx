@@ -7,15 +7,15 @@ class Grid extends React.Component {
     super(props)
     this.state = {
       squares: [ 
-        {index: 0},
-        {index: 1},
-        {index: 2},
-        {index: 3},
-        {index: 4},
-        {index: 5},
-        {index: 6},
-        {index: 7},
-        {index: 8},
+        {index: 0, isClicked: false},
+        {index: 1, isClicked: false},
+        {index: 2, isClicked: false},
+        {index: 3, isClicked: false},
+        {index: 4, isClicked: false},
+        {index: 5, isClicked: false},
+        {index: 6, isClicked: false},
+        {index: 7, isClicked: false},
+        {index: 8, isClicked: false},
         ],
       currentPlayer: ''
     }
@@ -38,8 +38,7 @@ class Grid extends React.Component {
         key={index} 
         togglePlayer={this.togglePlayer.bind(this)}
         currentPlayer={this.state.currentPlayer}
-        >
-        </Square>
+        ></Square>
     })
     return (
       <div>
